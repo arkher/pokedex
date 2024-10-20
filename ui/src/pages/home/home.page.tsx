@@ -39,8 +39,6 @@ export const Home: FC = () => {
     if (location) params.location = location;
     if (type) params.type = type as PokemonDef.PokemonType;
 
-    console.log(params);
-
     fetchPokemons(params);
   };
 
