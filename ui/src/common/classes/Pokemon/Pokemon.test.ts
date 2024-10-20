@@ -1,13 +1,18 @@
 import { describe, expect, test } from '@jest/globals';
 
+import { PokemonData } from '../../types/pokemon';
 import { Pokemon } from './Pokemon';
 
-const TEST_POKEMON_DATA = {
+const TEST_POKEMON_DATA: PokemonData = {
   name: 'pikachu',
   types: ['electric'],
   weight: 60,
   height: 4,
-  order: 35
+  order: 35,
+  nextEvolution: 'raichu',
+  locations: ['forest', 'city'],
+  encountered: true,
+  caught: false,
 }
 
 describe('Pokemon Class', () => {
@@ -16,7 +21,7 @@ describe('Pokemon Class', () => {
     expect(pokemon.getName()).toBe('pikachu');
   })
   test('it should get the types', () => {
-    expect(pokemon.getTypesString()).toEqual(['electric']);
+    expect(pokemon.getTypes()).toEqual(['electric']);
   })
   test('it should get the weight', () => {
     expect(pokemon.getWeight()).toBe(60);

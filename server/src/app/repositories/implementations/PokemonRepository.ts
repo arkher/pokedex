@@ -21,7 +21,7 @@ export class PokemonRepository implements IPokemonsRepository {
     {id: '6', name: 'CHARIZARD', encountered: false, caught: false, types: ['fire', 'flying'], weight: 905, height: 17, order: 6, nextEvolution: null, locations: []},
     {id: '7', name: 'SQUIRTLE', encountered: true, caught: true, types: ['water'], weight: 90, height: 5, order: 7, nextEvolution: 'WARTORTLE', locations: ["vermilion-city-area", "pallet-town-area", "lumiose-city-area"]},
     {id: '8', name: 'WARTORTLE', encountered: false, caught: false, types: ['water'], weight: 225, height: 10, order: 8, nextEvolution: 'BLASTOISE', locations: []},
-    {id: '9', name: 'BLASTOISE', encountered: false, caught: false, types: ['water'], weight: 855, height: 16, order: 9, nextEvolution: null, locations: []},
+    {id: '9', name: 'BLASTOISE', encountered: true, caught: false, types: ['water'], weight: 855, height: 16, order: 9, nextEvolution: null, locations: []},
   ];
 
   async findByParams(params: GetPokemonDTO): Promise<Pokemon[]> {

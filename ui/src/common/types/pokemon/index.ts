@@ -1,9 +1,34 @@
 export interface Pokemon {
-  name: string,
-  types: string[],
-  weight: number,
-  height: number,
-  order: number,
+  name: string;
+  types: PokemonType[];
+  weight: number;
+  height: number;
+  order: number;
+  nextEvolution: string | null;
+  locations: string[];
 }
 
-export type PokemonType = 'normal' | 'fighting' | 'flying' | 'poison' | 'ground' | 'rock' | 'bug' | 'ghost' | 'steel' | 'fire' | 'water' | 'grass' | 'electric' | 'psychic' | 'ice' | 'dragon' | 'dark' | 'fairy' | 'unknown' | 'shadow';
+export type PokemonData = Pokemon & {
+  encountered: boolean;
+  caught: boolean;
+};
+
+export type PokemonType =
+  | "normal"
+  | "fire"
+  | "water"
+  | "electric"
+  | "grass"
+  | "ice"
+  | "fighting"
+  | "poison"
+  | "ground"
+  | "flying"
+  | "psychic"
+  | "bug"
+  | "rock"
+  | "ghost"
+  | "dragon"
+  | "dark"
+  | "steel"
+  | "fairy";
