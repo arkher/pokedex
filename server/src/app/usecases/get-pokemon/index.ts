@@ -1,6 +1,6 @@
 import { PokemonRepository } from "../../repositories";
-import { GetPokemonController } from "./getPokemon.controller";
-import { GetPokemonUseCase } from "./getPokemon.usecase";
+import { GetPokemonController } from "./GetPokemon.controller";
+import { GetPokemonUseCase } from "./GetPokemon.usecase";
 
 const pokemonRepository = new PokemonRepository();
 
