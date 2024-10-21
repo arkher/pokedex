@@ -10,25 +10,25 @@ export const PokemonSearchForm: FC<{
       className="p-2 w-full xs:flex-col md:flex justify-center gap-2"
       onSubmit={onSubmit}
     >
-      <Input placeholder="Name" name="name" className="w-full md:!w-48" />
+      <Input placeholder="Name" name="name" className="w-full md:!w-48 mt-2" />
       <Input
         placeholder="Weight"
         name="weight"
         type="number"
-        className="w-full md:!w-28"
+        className="w-full md:!w-28 mt-2"
       />
       <Input
         placeholder="Height"
         name="height"
         type="number"
-        className="w-full md:!w-28"
+        className="w-full md:!w-28 mt-2"
       />
       <Input
         placeholder="Location"
         name="location"
-        className="w-full md:!w-48"
+        className="w-full md:!w-48 mt-2"
       />
-      <div className="w-full md:!w-48">
+      <div className="w-full md:!w-48 mt-2">
         <Select placeholder="Type" name="type">
           {pokemonTypes.map((type) => (
             <option key={type} value={type}>
@@ -38,7 +38,7 @@ export const PokemonSearchForm: FC<{
         </Select>
       </div>
 
-      <Button colorScheme="teal" type="submit">
+      <Button colorScheme="teal" type="submit" className="mt-2">
         Search
       </Button>
     </form>
