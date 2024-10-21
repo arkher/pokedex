@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { GetPokemonUseCase } from "./getPokemon.usecase";
+import { GetPokemonUseCase } from "./GetPokemon.usecase";
 
 export class GetPokemonController {
   constructor(private getPokemonUseCase: GetPokemonUseCase) {}
